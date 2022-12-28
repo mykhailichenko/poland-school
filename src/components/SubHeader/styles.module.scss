@@ -1,0 +1,60 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.listItem {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 33px;
+  color: #000000;
+
+  cursor: pointer;
+}
+
+.listItemFirst {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 33px;
+  color: #000000;
+
+  cursor: pointer;
+  margin-left: 70px;
+}
+
+.listItemLast {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 33px;
+  color: #000000;
+
+  cursor: pointer;
+  margin-right: 70px;
+}
+
+.listItem:hover {
+  color: #0F4E6D;
+}
+.listItemFirst:hover {
+  color: #0F4E6D;
+}
+.listItemLast:hover {
+  color: #0F4E6D;
+}
+
+.ml {
+  margin-left: 70px;
+}
+
+.mr {
+  margin-right: 70px;
+}

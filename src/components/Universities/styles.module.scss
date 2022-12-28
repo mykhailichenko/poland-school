@@ -1,0 +1,201 @@
+.universitiesWrapper {
+  margin-top: 70px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.divider {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.universityRow {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.photoWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.yagelon {
+  background: url('../../assets/yagelon.png');
+  width: 363px;
+  height: 250px;
+}
+
+.varshava {
+  background: url('../../assets/varshava.png');
+  height: 251px;
+  width: 363px;
+}
+
+.vroclav {
+  background: url('../../assets/vroclav.png');
+  width: 363px;
+  height: 251px;
+}
+
+.skadovska {
+  background: url('../../assets/skadovska.png');
+  width: 363px;
+  height: 251px;
+}
+
+.krakov {
+  background: url('../../assets/krakov.png');
+  width: 363px;
+  height: 251px;
+}
+
+.krakoveconom {
+  background: url('../../assets/karkiveconom.png');
+  width: 363px;
+  height: 251px;
+}
+
+.medKuri {
+  background: url('../../assets/medKuri.png');
+  width: 363px;
+  height: 251px;
+}
+
+.japanUni {
+  background: url('../../assets/japanUni.png');
+  width: 363px;
+  height: 251px;
+}
+
+.vincentPolya {
+  background: url('../../assets/vincentPolya.png');
+  width: 363px;
+  height: 251px;
+}
+
+.bankUni {
+  background: url('../../assets/bankUni.png');
+  width: 363px;
+  height: 251px;
+}
+
+.mickevich {
+  background: url('../../assets/mickevich.png');
+  width: 363px;
+  height: 251px;
+}
+
+.managementTech {
+  background: url('../../assets/managementTech.png');
+  width: 363px;
+  height: 251px;
+}
+
+.kosmetolog {
+  background: url('../../assets/kosmetolog.png');
+  width: 363px;
+  height: 251px;
+}
+
+.logicPoznan {
+  background: url('../../assets/logicPoznan.png');
+  width: 363px;
+  height: 251px;
+}
+
+.vistula {
+  background: url('../../assets/vistula.png');
+  width: 363px;
+  height: 251px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 362px;
+  height: 94px;
+  background: #0F4E6D;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: #FFFFFF;
+
+  margin-top: 30px;
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #156e99;
+}
+
+.btn:active {
+  background: #0f4d6c;
+}
+
+.info {
+  margin-left: 39px;
+}
+
+.title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+
+  color: #0F4E6D;
+}
+
+.subTitle {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+
+  color: #000000;
+  margin-top: 13px;
+}
+
+.costText {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 37px;
+  color: #000000;
+
+  margin-top: 13px;
+}
+
+.faculties {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 37px;
+  color: #000000;
+  margin-top: 13px;
+}
+
+.additionalText {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 2;
+  color: #0F4E6D;
+
+  margin-top: 40px;
+}
+
+.cost {
+  color: #0F4E6D;
+  font-weight: 500;
+}

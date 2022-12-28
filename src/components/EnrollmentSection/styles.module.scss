@@ -1,0 +1,79 @@
+.wrapper {
+  margin-top: 100px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.steps {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.stepWrapper {
+  width: 440px;
+  height: 293px;
+
+  border: 2px solid #0F4E6D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stepTitle {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #0F4E6D;
+  margin-top: 30px;
+}
+
+.stepDescription {
+  text-align: center;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.fileConsult {
+  background: url('../../assets/file_ 1.png');
+  height: 71px;
+  width: 70px;
+
+  margin-bottom: 20px;
+}
+
+.fileConsult {
+  background: url('../../assets/file_ 1.png');
+  height: 71px;
+  width: 70px;
+
+  margin-bottom: 20px;
+}
+
+.stepTwoFile {
+  background: url('../../assets/file_pen_ 1.png');
+  height: 71px;
+  width: 71px;
+
+  margin-bottom: 20px;
+}
+
+.stepThreeFile {
+  background: url('../../assets/profile_ 1.png');
+  height: 71px;
+  width: 71px;
+}

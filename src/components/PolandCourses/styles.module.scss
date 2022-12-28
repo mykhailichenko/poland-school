@@ -1,0 +1,74 @@
+.coursesWrapper {
+  margin-top: 100px;
+  padding-left: 70px;
+}
+
+.languageWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo {
+  background: url('../../assets/polandLanguage.png');
+  width: 597px;
+  height: 774px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+}
+
+.language {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 61px;
+  color: #000000;
+}
+
+.mainText {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: justify;
+
+  color: #000000;
+
+  margin-right: 80px;
+  margin-top: 70px;
+}
+
+.freeConsultBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 386px;
+  height: 94px;
+  background: #0F4E6D;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: #FFFFFF;
+
+  margin-top: 80px;
+
+  cursor: pointer;
+}
+
+.freeConsultBtn:hover {
+  background: #156e99;
+}
+
+.freeConsultBtn:active {
+  background: #0f4d6c;
+}

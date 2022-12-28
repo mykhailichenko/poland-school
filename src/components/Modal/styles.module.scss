@@ -1,0 +1,232 @@
+.modalBody {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding-right: 100px;
+padding-left: 100px;
+}
+
+.consultText {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 55px;
+line-height: 67px;
+/* identical to box height */
+
+
+color: #0F4E6D;
+margin-top: 50px;
+}
+
+.sectionText {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+
+
+color: rgba(0, 0, 0, 0.8);
+}
+
+.inputSection {
+margin-top: 70px;
+}
+
+.inputData {
+width: 795px;
+height: 70px;
+
+border: 1px solid rgba(0, 0, 0, 0.5);
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+
+
+color: rgba(0, 0, 0, 0.5);
+outline: none;
+padding-left: 20px;
+margin-top: 20px;
+}
+
+.modalBodyCheck {
+width: 100%;
+display: flex;
+flex-direction: column;
+}
+
+.infoText {
+margin-top: 70px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 30px;
+
+color: rgba(0, 0, 0, 0.8);
+}
+
+.checkBoxText {
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+
+
+color: rgba(0, 0, 0, 0.8);
+}
+
+/* Customize the label (the container) */
+.containerCheck {
+margin-top: 30px;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  /* identical to box height */
+
+
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Hide the browser's default checkbox */
+.containerCheck input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+/* On mouse-over, add a grey background color */
+.containerCheck:hover input ~ .checkmark {
+  background-color: #ffffff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerCheck input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCheck input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheck .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.formError {
+color: red;
+}
+
+.consultBtn {
+width: 817px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 73px;
+  background: #0F4E6D;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #FFFFFF;
+  cursor: pointer;
+  margin-top: 50px;
+  border: none;
+}
+
+.consultBtn:hover {
+  background: #156e99;
+}
+
+.consultBtn:active {
+  background: #0f4d6c;
+}
+
+.consultBtnDisabled {
+margin-top: 50px;
+width: 817px;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 73px;
+  background: #738994;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.footerText{
+width: 817px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 27px;
+
+color: #000000;
+margin-top: 40px;
+}
