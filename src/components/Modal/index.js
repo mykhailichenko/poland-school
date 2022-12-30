@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import { Modal } from 'antd';
 import { Field, Form, Formik } from 'formik';
+import emailjs from '@emailjs/browser';
 
 import s from './styles.module.scss';
 
@@ -8,6 +9,8 @@ const ModalConsult = ({show, handleClose}) => {
   const [highEducation, setHighEducation] = useState(false);
   const [regularEducation, setRegularEducation] = useState(false);
   const [languageCourses, setLanguageCourses] = useState(false);
+
+  const form = useRef();
 
   const validateEmail = (value) => {
     let error;
@@ -20,24 +23,18 @@ const ModalConsult = ({show, handleClose}) => {
   };
 
   const sendEmail = (values) => {
-    console.log(
-      {
-        name: values.name,
-        email: values.email,
-        phone: values.phone,
-        highEducation: highEducation ? 'Вища освіта' : '',
-        regularEducation: regularEducation ? 'Середня освіта' : '',
-        languageCourses: languageCourses ? 'Курси польської мови' : '',
-      }
-    );
-
-    // Email.send({
-    //   SecureToken : "2821beb3-20f5-4b8c-8de8-8c785dc23199",
-    //   To : 'iam.mivinka@gmail.com',
-    //   From : "ghf.mivinka@gmail.com",
-    //   Subject : "Безкоштовна консультація",
-    //   Body : "sdfsdfsdfsdsdfsdf"
-    // }).then();
+    emailjs.send('service_99za1h9', 'template_9n87sw6', {
+      "name": values.name,
+      "email": values.email,
+      "message": `Доброго дня, в мене є питання по: ${highEducation ? 'Вища освіта' : ''}, ${regularEducation ? 'Середня освіта' : ''}, ${languageCourses ? 'Курси польської мови' : ''}. Дякую. ${values.phone}`
+    }, 'J5uRoJvmtyMlUHAP6')
+      .then((result) => {
+        console.log(result.text);
+        handleClose();
+      }, (error) => {
+        console.log(error.text);
+        handleClose();
+      });
   };
 
   return (
@@ -63,7 +60,7 @@ const ModalConsult = ({show, handleClose}) => {
             }}
           >
             {({ errors, touched }) => (
-              <Form>
+              <Form ref={form}>
                 <div className={s.inputSection}>
                   <span className={s.sectionText}>Ім’я</span>
                   <div className={errors.name && touched.name ? s.inputFieldErr : s.inputField}>
@@ -108,20 +105,32 @@ const ModalConsult = ({show, handleClose}) => {
                 <div className={s.modalBodyCheck}>
                   <span className={s.infoText}>Що вас цікавить?</span>
 
-                  <label className={s.containerCheck}>Вища освіта
-                    <input type="checkbox" onClick={(e) => setHighEducation(!highEducation)}></input>
-                    <span className={s.checkmark}></span>
-                  </label>
+                  <div className={s.containerCheckBox}>
+                    <div className={s.checkboxInactive} onClick={() => setHighEducation(!highEducation)}>
+                      {
+                        highEducation ? <div className={s.checkboxActive} /> : null
+                      }
+                    </div>
+                    <div className={s.checkboxText}>Вища освіта</div>
+                  </div>
 
-                  <label className={s.containerCheck}>Середня освіта
-                    <input type="checkbox" onClick={(e) => setRegularEducation(!regularEducation)}></input>
-                    <span className={s.checkmark}></span>
-                  </label>
+                  <div className={s.containerCheckBox}>
+                    <div className={s.checkboxInactive} onClick={(e) => setRegularEducation(!regularEducation)}>
+                      {
+                        regularEducation ? <div className={s.checkboxActive} /> : null
+                      }
+                    </div>
+                    <div className={s.checkboxText}>Середня освіта</div>
+                  </div>
 
-                  <label className={s.containerCheck}>Курси польської мови
-                    <input type="checkbox" onClick={(e) => setLanguageCourses(!languageCourses)}></input>
-                    <span className={s.checkmark}></span>
-                  </label>
+                  <div className={s.containerCheckBox}>
+                    <div className={s.checkboxInactive} onClick={(e) => setLanguageCourses(!languageCourses)}>
+                      {
+                        languageCourses ? <div className={s.checkboxActive} /> : null
+                      }
+                    </div>
+                    <div className={s.checkboxText}>Курси польської мови</div>
+                  </div>
                 </div>
 
                 {
@@ -137,7 +146,6 @@ const ModalConsult = ({show, handleClose}) => {
               </Form>
             )}
           </Formik>
-
         </div>
       </Modal>
     </>
